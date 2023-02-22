@@ -1,6 +1,16 @@
 /* Importação de fonte via Google Fonts --------- */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
 
+:root {
+    --dark-pink: #DB1E8C;
+    --light-pink: #FF97D3;
+    --bluewood: #33475B;
+    --dark-blue: #264FEC;
+    --white: #FFFFFF;
+    --sand: #F5F5F5;
+    --font: 'IBM Plex Sans', sans-serif;
+}
+
 /* Reset básico --------- */
 * {
     margin: 0;
@@ -8,35 +18,29 @@
     box-sizing: border-box;
 }
 
-/* Body --------- */
-body {
-    background-color: #33475B;
-    font-family: 'IBM Plex Sans', sans-serif;
-}
-
 /* Header --------- */
 header {
     height: 80px;
-    background-color: #FFFFFF;
+    background-color: var(--white);
     display: flex;
 }
 
 .container-elementos-header {
-    width: 1280px;
-    margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .titulo-principal {
     font-size: 24px;
-    color: #0000EE;
+    color: var(--dark-blue);
     font-weight: 400;
 }
 
 .label-pesquisa {
-    background-color: #DB1E8C;
+    background-color: var(--dark-pink);
     height: 40px;
     padding: 8px;
     display: flex;
@@ -52,5 +56,77 @@ header {
 }
 
 ::placeholder {
-    color: #FF97D3;
+    color: var(--light-pink);
+}
+
+/* Body --------- */
+body {
+    background-color: var(--bluewood);
+    font-family: var(--font);
+}
+
+.container-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: var(--sand);
+    width: 400px;
+    height: 450px;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 4px;
+}
+
+.titulo-cards {
+    color: var(--bluewood)
+}
+
+.texto-cards {
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.botao-cards {
+    background-color: transparent;
+    color: var(--dark-blue);
+    border: .1px solid;
+    border-color:blue;
+    border-radius: 4px;
+    width: 138px;
+    height: 47px;
+    transition-duration: 0.4s;
+}
+
+.botao-cards:hover {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    transform: scale(1.2)
+}
+
+@media screen and (max-width:879px) {
+
+    header {
+        height: 130px;
+    }
+
+    .container-elementos-header {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .container-cards {
+        padding-top: 10px;
+    }
+
+    .cards {
+        height: 450px;
+        box-sizing: content-box;
+    }
 }
