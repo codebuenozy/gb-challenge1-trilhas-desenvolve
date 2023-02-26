@@ -8,6 +8,7 @@
     --dark-blue: #264FEC;
     --white: #FFFFFF;
     --sand: #F5F5F5;
+    --black: #000000;
     --font: 'IBM Plex Sans', sans-serif;
 }
 
@@ -28,15 +29,16 @@ header {
 .container-elementos-header {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 25px;
 }
 
 .titulo-principal {
     font-size: 24px;
     color: var(--dark-blue);
     font-weight: 400;
+    margin-left: 180px;
 }
 
 .label-pesquisa {
@@ -89,6 +91,8 @@ body {
 }
 
 .texto-cards {
+    margin-top: 30px;
+    margin-bottom: auto;
     font-weight: 400;
     line-height: 21px;
 }
@@ -97,7 +101,7 @@ body {
     background-color: transparent;
     color: var(--dark-blue);
     border: .1px solid;
-    border-color:blue;
+    border-color: blue;
     border-radius: 4px;
     width: 138px;
     height: 47px;
@@ -110,6 +114,57 @@ body {
     transform: scale(1.2)
 }
 
+.container-footer {
+    display: flex;
+    background-color: var(--white);
+    width: 100%;
+    height: 110px;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    margin-top: 100px;
+}
+
+.img-gb-boticario {
+    padding-right: 10px;
+}
+
+.img-alura {
+    padding-bottom: 15px;
+}
+
+.logo-direita {
+    display: flex;
+}
+
+.links-rodapé {
+    margin: 0 auto;
+    padding-right: 20px;
+}
+
+.links-rodapé li {
+    margin-bottom: 10px;
+    
+}
+
+.midia-social {
+    padding-left: 20px;
+}
+
+.midia-social img {
+    padding-left: 10px;
+}
+
+.midia-social li {
+    padding-left: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+
 @media screen and (max-width:879px) {
 
     header {
@@ -121,12 +176,32 @@ body {
         justify-content: space-around;
     }
 
+    .titulo-principal {
+        font-size: 24px;
+        color: var(--dark-blue);
+        font-weight: 400;
+        margin: 0 auto;
+    }
+
     .container-cards {
         padding-top: 10px;
     }
 
     .cards {
-        height: 450px;
+        height: auto;
         box-sizing: content-box;
+        flex-wrap: nowrap;
+    }
+
+    .texto-cards {
+        margin-bottom: 30px;
+    }
+
+    .container-footer {
+        flex-direction: column;
+        height: auto;
+        justify-content: space-between;
+        gap: 10px;
+        padding-top: 10px;
     }
 }
