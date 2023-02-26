@@ -29,7 +29,7 @@ header {
 .container-elementos-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     margin: 0 25px;
 }
@@ -71,6 +71,7 @@ body {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    padding-top: 10px;
 }
 
 .cards {
@@ -203,5 +204,13 @@ a {
         justify-content: space-between;
         gap: 10px;
         padding-top: 10px;
+    }
+}
+
+@media screen and (min-width:1760px) {
+    
+    .container-cards {
+        max-width: 90%;
+        margin: auto;
     }
 }
